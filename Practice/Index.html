@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+    <div id="div1">
+        <p id="p1">Hi! I'm a paragraph.</p>
+        <p id="p2">Hello! I'm another paragraph.</p>
+    </div>
+
+    <script>
+        var parentNode = document.getElementById("div1");
+        var childNode = document.getElementById("p1");
+        parentNode.removeChild(childNode);
+    </script>
+<div>
+<button onclick="addAChild()">Add a div element to the container!</button>
+<div id="container"></div>
+<script>
+    function addAChild() {
+        let newElem = document.createElement("div");
+        newElem.innerHTML = "This is a new Element created by appendChild()";
+        let container = document.getElementById("container");
+        container.appendChild(newElem);
+    }
+</script>
+</div>
+<div>
+    <p>Click the button to remove the first item from the list.</p>
+    <ul id="myList"><li>JavaScript</li><li>C#</li><li>Java</li><li>Python</li><li>Ruby</li></ul>
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+        function myFunction() {
+            var list = document.getElementById("myList");
+            list.removeChild(list.childNodes[0]);
+        }
+    </script>  
+</div>
+</body>
+
+</html>
